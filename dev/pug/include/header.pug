@@ -1,0 +1,14 @@
+mixin header(data)
+	+b.HEADER.header#header
+		+e.container
+			a.logo(href="/"): img(src="img/svg/logo.svg", alt="logo")
+
+			+e.NAV.nav.headerNav
+				ul
+					li: a.anchorBtn(href="#benefit") Пункт меню 1
+					li: a.anchorBtn(href="#cashAccount")  Пункт меню 2
+					li: a.anchorBtn(href="#bonusesMouth")  Пункт меню 3
+
+			.hamburger#hamburger
+				span
+

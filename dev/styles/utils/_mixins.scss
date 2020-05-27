@@ -1,0 +1,70 @@
+
+@mixin mw($media: 1700px, $above: false) {
+  @if $above {
+    @media (min-width: $media) {
+      @content;
+    }
+  } @else {
+        @media (max-width: $media) {
+      @content;
+    }
+  }
+}
+@mixin mh($media: 600px, $above: false) {
+  @if $above {
+    @media (min-height: $media) {
+      @content;
+    }
+  } @else {
+        @media (max-height: $media) {
+      @content;
+    }
+  }
+}
+
+@mixin btn($color: #333, $hover: #fff) {
+  min-width: 180px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  color: $color;
+  font-weight: bold;
+  text-decoration: none;
+  background: none;
+  border: 2px solid $color;
+  outline: none;
+  transition: 0.3s;&:hover {
+    background: $color;
+    color: $hover;
+    border-color: $color;
+  }
+}
+
+
+@mixin bg() {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+@mixin customScroll($w: 4px, $bgt: $color2, $b: 0px, $bg: $color) {
+  overflow: auto;
+  @media (min-width: 1241px) {
+    &::-webkit-scrollbar {
+      width: $w;
+    }&::-webkit-scrollbar-track {
+      background: $bgt;
+      border: $b;
+    }&::-webkit-scrollbar-thumb {
+      background: $bg;
+    }
+
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}

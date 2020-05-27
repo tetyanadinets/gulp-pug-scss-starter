@@ -1,0 +1,17 @@
+extends ../main
+
+block variables
+	- var title = 'Главная страница';
+	- var pageClass = 'home-page';
+
+block content
+	+b.container
+		h1 Hello developer!
+		+e.content
+			+form()
+		+e.content
+			+slider()
+		+e.content
+			.btn-wrap
+				a(href="#examplepopup").btn.popupBtn open popup
+			+popup()
