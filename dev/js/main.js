@@ -28,8 +28,3 @@ window.addEventListener('load', () => {
 
 
 });
-
-function checkSome(){
-	console.log('ok');
-}
-
